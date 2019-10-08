@@ -1,0 +1,63 @@
+<div class="container tmnReg">
+    <div class="login">
+        <!--header>
+                <div id="logo" align="center">
+                    <img src="/assets/img/LOGO.png" />
+                </div>
+            </header-->
+        <section>
+            <header>
+                Registro
+            </header>
+            <article>
+                <form class="login-form">
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Tipo Documento</mat-label>
+                        <mat-select required>
+                            <mat-option>-- Seleccione --</mat-option>
+                            <mat-option value="option">CC</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Documento</mat-label>
+                        <input matInput placeholder="Apellidos" value="" required>
+                    </mat-form-field>
+                    <mat-form-field class="full-width" appearance="outline" floatLebel>
+                        <mat-label>Nombres</mat-label>
+                        <input matInput placeholder="Nombres" value="" required>
+                    </mat-form-field>
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Apellidos</mat-label>
+                        <input matInput placeholder="Apellidos" value="" required>
+                    </mat-form-field>
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Fecha Nacimiento</mat-label>
+                        <input matInput [max]="maxNacimiento" [matDatepicker]="fnPicker" 
+                            placeholder="Fecha Nacimiento" 
+                            disabled required>
+                        <mat-datepicker-toggle matSuffix [for]="fnPicker"></mat-datepicker-toggle>
+                        <mat-datepicker loca #fnPicker disabled="false" color="accent"></mat-datepicker>
+                    </mat-form-field>
+                    <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Email</mat-label>
+                            <input matInput placeholder="Email" value="" required>
+                        </mat-form-field>
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Usuario</mat-label>
+                        <input matInput placeholder="Apellidos" value="" required>
+                    </mat-form-field>
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Contraseña</mat-label>
+                        <input matInput type="password" placeholder="Apellidos" value="" required>
+                    </mat-form-field>
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Repita Contraseña</mat-label>
+                        <input matInput type="password" placeholder="Apellidos" value="" required>
+                    </mat-form-field>
+                    <button class="full-width" mat-raised-button color="accent">Registrarse</button>
+                    <a routerLink="/login" class="btn btn-primary full-width" style="margin: 4px 0">Volver</a>
+                </form>
+            </article>
+        </section>
+    </div>
+</div>
