@@ -1,6 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Router, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 import { UserService } from 'src/app/service/user/user.service';
+import { HttpClient, HttpRequest, HttpEvent,HttpHeaders } from '@angular/common/http';
+import { Observable, of } from 'rxjs';
+import {environment} from '../../../environments/environment';
+import { catchError, map, tap } from 'rxjs/operators';
+import { retry } from 'rxjs/internal/operators/retry';
 
 @Injectable({
   providedIn: 'root'
@@ -12,9 +17,7 @@ export class AuthService implements CanActivate {
   ) { }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
-    const currentUser = this.userService;
-    if (currentUser) {
-      // authorised so return true
+    if (this.userService.validarSesion()) {
       return true;
     }
 

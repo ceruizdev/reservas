@@ -17,7 +17,8 @@ import {MatSelectModule} from '@angular/material/select';
 import { AlertaComponent } from './component/alerta/alerta/alerta.component';
 import { HeaderComponent } from './component/home/header/header.component';
 import { MatToolbarModule,MatSidenavModule,MatListModule,MatCardModule } from '@angular/material';
-
+import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,10 @@ import { MatToolbarModule,MatSidenavModule,MatListModule,MatCardModule } from '@
     MatToolbarModule,
     MatSidenavModule,
     MatCardModule,
-    MatListModule
+    MatListModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

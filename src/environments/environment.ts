@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiIngreso: 'http://localhost:8762/user'
 };
 
 /*

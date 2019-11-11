@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AlertaService } from 'src/app/service/alerta/alerta.service';
 
 @Component({
   selector: 'app-alerta',
@@ -7,23 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlertaComponent implements OnInit {
 
-  mensajes: Alerta[] = [];
 
-  constructor() { }
+  constructor(public alertaService:AlertaService) { }
 
   ngOnInit() {
   }
 
-  add(mensaje: Alerta) {
-    this.mensajes.push(mensaje);
-  }
-
-  close(alert: Alerta) {
-    this.mensajes.splice(this.mensajes.indexOf(alert), 1);
-  }
-
-  clear() {
-    this.mensajes = [];
-  }
+ 
 
 }
