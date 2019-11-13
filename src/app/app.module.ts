@@ -19,6 +19,9 @@ import { HeaderComponent } from './component/home/header/header.component';
 import { MatToolbarModule,MatSidenavModule,MatListModule,MatCardModule } from '@angular/material';
 import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { MapsComponent } from './component/maps/maps.component';
+import { AgmCoreModule } from '@agm/core';
+import { ReservaComponent } from './component/reserva/reserva.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,9 @@ import { HttpClientModule } from '@angular/common/http';
     RegistroComponent,
     HomeComponent,
     AlertaComponent,
-    HeaderComponent
+    HeaderComponent,
+    MapsComponent,
+    ReservaComponent
   ],
   imports: [
     NgbModule,
@@ -46,7 +51,10 @@ import { HttpClientModule } from '@angular/common/http';
     MatListModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyD8VP8twdaMHNgufKX2gNAZ00KRihgTCZg'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiIngreso: 'http://localhost:8762/user'
+  apiIngreso: 'http://localhost:8762/user',
+  apiCliente: 'http://localhost:8762/client_module'
 };
 
 /*
