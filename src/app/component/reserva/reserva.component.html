@@ -1,1 +1,45 @@
-<p>reserva works!</p>
+<div class="container tmnReg">
+        <h2 style="color:white">Reserva</h2>
+        <div class="grid-item login">
+                <div>{{establecimiento.barrio}}</div>
+                <section>
+                
+                <form class="user-form" [formGroup]="formUsr" #formDir="ngForm" 
+                (ngSubmit)="generarReserva()">
+                        <mat-form-field class="full-width" appearance="outline" floatLebel>
+                                <mat-label>Nombre</mat-label>
+                                <input matInput placeholder="Nombres"  formControlName="nombres" id="nombres"
+                                 required>
+                                 <mat-error *ngIf="nombres.hasError('required')">
+                                    Nombres <strong>requerido</strong>
+                                  </mat-error>
+                        </mat-form-field>
+                        <mat-form-field class="full-width" appearance="outline" floatLebel>
+                                <mat-label>Numero de documento</mat-label>
+                                <input matInput placeholder="Numero de documento"  formControlName="nombres" id="nombres"
+                                 required>
+                                 <mat-error *ngIf="nombres.hasError('required')">
+                                    Nombres <strong>requerido</strong>
+                                  </mat-error>
+                        </mat-form-field>
+                        <mat-form-field class="full-width" appearance="outline">
+                                <mat-label>Fecha reserva</mat-label>
+                                <input matInput [max]="maxNacimiento" [matDatepicker]="fnPicker" 
+                                    placeholder="Fecha reserva" 
+                                    disabled required
+                                    formControlName="fecReserva" id="fecReserva">
+                                <mat-datepicker-toggle matSuffix [for]="fnPicker"></mat-datepicker-toggle>
+                                <mat-datepicker loca #fnPicker disabled="false" color="accent"></mat-datepicker>
+                                <mat-error *ngIf="fecReserva.hasError('required')">
+                                    Fecha de reserva <strong>requerido</strong>
+                                </mat-error>
+                            </mat-form-field>
+                            <button class="full-width" mat-raised-button color="accent">Generar Reserva</button>
+                </form>
+        </section>
+        </div>
+        
+</div>
+
+
+

@@ -30,6 +30,10 @@ export class UserService {
     return this.http.post<Usuario>(this.urlIngreso,ingreso,this.httpOptions);
   }
 
+  getRequest(servicio:string):Observable<Object>{
+    return this.http.get(servicio);
+  }
+
   validarSesion():boolean{
     var token =sessionStorage.getItem("token");
     if(token){

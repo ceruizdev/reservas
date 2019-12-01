@@ -1,0 +1,17 @@
+<div class="container">
+    <h2 style="color:white">Selecciona el establecimiento</h2>
+    <div class="grid-container">
+            <div *ngFor="let item of items[0]" class="grid-item">
+                <p></p>    
+                {{item.nombre}}<br />
+                <img src="{{item.logo}}" alt="establecimiento" width="200" height="180" style="border-radius:50%">
+                <h3>Detalles:</h3><br />
+                <b>Ubicación:</b> {{item.ubicacion}}<br />
+                <b>Numero de canchas:</b> {{item.numeroCanchas}}<br />
+                <b>horaApertura:</b> {{item.horaApertura}}<br />
+                <b>horaApertura:</b> {{item.horaApertura}}<br />
+                <b>{{item.location}}</b><br />
+                <a routerLink="/canchas" [state]="item" mat-raised-button color="accent" class="btn btn-primary" style="margin: 4px 0">Ver canchas</a>
+            </div>
+    </div>
+</div>

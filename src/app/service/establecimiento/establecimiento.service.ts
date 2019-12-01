@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpRequest, HttpEvent, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
 import { AlertaService } from 'src/app/service/alerta/alerta.service';
-import { ENGINE_METHOD_CIPHERS } from 'constants';
+//import { ENGINE_METHOD_CIPHERS } from 'constants';
 import { Observable } from 'rxjs/internal/Observable';
 import { Establecimiento } from 'src/app/model/establecimiento/establecimiento';
 

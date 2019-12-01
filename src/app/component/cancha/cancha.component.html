@@ -1,0 +1,16 @@
+<div class="container">
+    <h2 style="color:white">Selecciona la cancha</h2>
+    <div class="grid-container">
+            <div *ngFor="let item of items" class="grid-item">
+                <p></p>    
+                {{item.name}}
+                <img src="{{item.foto}}" alt="cancha" width="300" height="250" style="border-radius:50%">
+                <h3>Descipción:</h3> <br />
+                <b>Capacidad:</b> {{item.capacidad}}<br />
+                <b>Tipo de grama:</b> {{item.tipoGrama}}<br />
+                <b>Tipo de techo</b> {{item.tipoTecho}}<br />
+                <b>Tarifa:</b> {{item.tarifa}}<br />
+                <a routerLink="/reserva" [state]="item" mat-raised-button color="accent" class="btn btn-primary" style="margin: 4px 0">Reservar</a>
+            </div>
+    </div>
+</div>

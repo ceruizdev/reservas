@@ -3,7 +3,6 @@ import { Ingreso } from 'src/app/model/usuario/ingreso';
 import { UserService } from 'src/app/service/user/user.service';
 import { AlertaService } from 'src/app/service/alerta/alerta.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { stringify } from 'querystring';
 import { Router } from '@angular/router';
 
 @Component({
@@ -19,7 +18,7 @@ export class LoginComponent implements OnInit {
   private alertaService:AlertaService,
   private router:Router) {
     
-   }
+  }
 
   ngOnInit() {
     this.formLogin = new FormGroup({
@@ -33,7 +32,6 @@ export class LoginComponent implements OnInit {
       ])
     });
   }
-
 
   registrar(frmLogin){
     this.ingreso = new Ingreso();

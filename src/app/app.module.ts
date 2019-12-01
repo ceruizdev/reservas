@@ -21,7 +21,10 @@ import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MapsComponent } from './component/maps/maps.component';
 import { AgmCoreModule } from '@agm/core';
+import { EstablecimientoComponent } from './component/establecimiento/establecimiento.component';
 import { ReservaComponent } from './component/reserva/reserva.component';
+import { CanchaComponent } from './component/cancha/cancha.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar'; 
 
 @NgModule({
   declarations: [
@@ -32,7 +35,9 @@ import { ReservaComponent } from './component/reserva/reserva.component';
     AlertaComponent,
     HeaderComponent,
     MapsComponent,
-    ReservaComponent
+    EstablecimientoComponent,
+    ReservaComponent,
+    CanchaComponent
   ],
   imports: [
     NgbModule,
@@ -52,6 +57,7 @@ import { ReservaComponent } from './component/reserva/reserva.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    MatSnackBarModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyD8VP8twdaMHNgufKX2gNAZ00KRihgTCZg'
     })
